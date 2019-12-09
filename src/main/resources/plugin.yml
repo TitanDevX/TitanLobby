@@ -1,0 +1,6 @@
+name: ${project.name}
+version: ${project.version}
+main: ${main.class}
+author: TitanDev
+api-version: 1.13
+depend: [PlaceholderAPI]

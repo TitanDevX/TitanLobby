@@ -1,0 +1,36 @@
+Item: Compass
+Data: 0
+Color: White
+Amount: 1
+Glow: false
+Display_Name: "&b&lChoose Server"
+Slot: 2
+Lores: []
+
+# If true, this will item will given automatically on join to every player. you can specify permissions down.
+Give_On_Join: true
+
+# If 'Give_On_Join' is true, this will check permission before giving the player the item on join.
+# Set to "" to not check for permission.
+Give_Perms: "titanlobby.itemgive.all"
+
+
+# Opens this menu from titanLobby, you only need to specify the name of it.
+Menu_To_Open: ''
+Commands:
+  # These Commands will be run by the player.
+  # if a command is not started with a '/' it will make the player say a message.
+  Run_As_Player_CMDs:
+    - /warp BedWars
+    # These commands will be run by the console.
+    # they must NOT start with a '/'.
+  Run_As_Console_CMDs:
+    - warp {player} BedWars
+    - give {player} diamond_block
+  # If true, this will check for party members, this item must be for join purposes only.
+  Check_Party_On_Click: true
+
+
+# If true, once this item has given to a player, this item will persist in the player's inventory whatever he do.
+# Coming soon! Review the plugin to make us release updates faster!
+#Keep: true

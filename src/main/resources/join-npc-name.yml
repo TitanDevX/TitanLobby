@@ -1,0 +1,17 @@
+NPC_Display_Name: "&b&lPlay &6&lBedWars"
+
+NPC_Type: Villager
+
+Commands:
+  # These Commands will be run by the player.
+  # if a command is not started with a '/' it will make the player say a message.
+  Run_As_Player_CMDs:
+    - /warp BedWars
+  # These commands will be run by the console.
+  # they must NOT start with a '/'.
+  Run_As_Console_CMDs:
+    - warp {player} BedWars
+    - give {player} diamond_block
+  # If true, this will check for party members, this item must be for join purposes only.
+  Check_Party_On_Click: true
+

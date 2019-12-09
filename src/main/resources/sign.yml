@@ -1,0 +1,40 @@
+
+# You'll need to provide us a prefix in the top of the sign when creating one, for example: '[sign]',
+# if this is true, the prefix will be removed from the sign when you place it,
+# And the sign will still be recognize-able by our plugin.
+Clear_Name_On_Place: true
+
+# Just specify the prefix, and we'll write the sign for you!
+Automatic_Fill:
+  Enabled: true
+  Lines:
+    # The prefix will not be cleared if this is set to 'Nan'.
+    0: ""
+    1: ""
+    2: ""
+    3: ""
+# if enabled, this will teleport this player to a certain location and/or server (if bungeecord enabled), and sends a message on teleport.
+Automatic_Teleport:
+  Enabled: true
+  Location: world, 100, 100, 100
+  # Set to "nan" if you don't want to change servers. this may only work if the server is under a bungeecord proxy and able to perform command /server.
+  Server: "BedWars"
+  Message_On_Teleport: "&a&lTeleported!"
+Commands:
+  # These Commands will be run by the player.
+  # if a command is not started with a '/' it will make the player say a message.
+  Run_As_Player_CMDs:
+    - /warp BedWars
+  # These commands will be run by the console.
+  # they must NOT start with a '/'.
+  Run_As_Console_CMDs:
+    - warp {player} BedWars
+    - give {player} diamond_block
+  # If true, this will check for party members, this item must be for join purposes only.
+  Check_Party_On_Click: true
+
+
+
+
+
+

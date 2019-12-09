@@ -1,0 +1,38 @@
+Menu_Title: "&b&lWhat To Play?"
+
+# can be 9, 27, 36, 45 or 54.
+Menu_Size: 27
+
+Buttons:
+  BedWars:
+    # Use item name specifically for your version. however this is version-friendly.
+    Item: White_Bed
+    Glow: true
+    Display_Name: "&c&lBed&e&lWars"
+    Lores:
+      - "Destroy enemies beds!"
+    Data: 1
+    Amount: 1
+    # Easy color setting. set this to nothing if you don't want to use colors. this may override data if set.
+    Color: White
+    Slot: 2
+
+    # if enabled, this will teleport this player to a certain location and/or server (if bungeecord enabled), and sends a message on teleport.
+    Automatic_Teleport:
+      Enabled: true
+      Location: world, 100, 100, 100
+      # Set to "nan" if you don't want to change servers. this may only work if the server is under a bungeecord proxy and able to perform command /server.
+      Server: "BedWars"
+      Message_On_Teleport: "&a&lTeleported!"
+    Commands:
+      # These Commands will be run by the player.
+      # if a command is not started with a '/' it will make the player say a message.
+      Run_As_Player_CMDs:
+        - /warp BedWars
+      # These commands will be run by the console.
+      # they must NOT start with a '/'.
+      Run_As_Console_CMDs:
+        - warp {player} BedWars
+        - give {player} diamond_block
+      # If true, this will check for party members, this item must be for join purposes only.
+      Check_Party_On_Click: true
